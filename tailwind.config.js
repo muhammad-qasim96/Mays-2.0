@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     extend: {
       flexGrow: { 2: 2 },
+      colors: { mainColor: "#EC5727", darkBg: "#131313" },
     },
     fontFamily: { pop: ["Poppins", "sans-serif"] },
     backgroundImage: {

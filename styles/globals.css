@@ -11,4 +11,7 @@
   body {
     @apply font-pop;
   }
+  .webContainer {
+    @apply mx-auto h-full w-full px-5 md:px-10 lg:px-14;
+  }
 }
