@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
 import About from "../components/About";
-import Blog from "../components/Blog";
+import Contact from "../components/Contact";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 
@@ -22,18 +22,18 @@ const Home: NextPage = () => {
         />
       </Head>
 
-      <main className="">
+      <main className="bg-darkBg">
         <Header />
-        <section id="home" className="h-screen">
+        <section id="home" className="">
           <Hero />
         </section>
 
-        <section id="about" className="h-screen">
+        <section id="about" className="">
           <About />
         </section>
 
-        <section id="blog" className="h-screen">
-          <Blog />
+        <section id="contact">
+          <Contact />
         </section>
       </main>
     </>
