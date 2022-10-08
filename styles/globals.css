@@ -11,6 +11,9 @@
   body {
     @apply font-pop;
   }
+}
+
+@layer components {
   .webContainer {
     @apply mx-auto h-full w-full px-5 md:px-10 lg:px-14;
   }

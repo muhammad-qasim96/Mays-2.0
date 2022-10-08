@@ -7,7 +7,7 @@ type Props = {};
 const Contact = (props: Props) => {
   return (
     <div className="mx-auto h-screen w-full overflow-hidden bg-darkBg pt-7">
-      <div className="mx-auto h-full max-w-6xl">
+      <div className="mx-auto h-full max-w-6xl px-4 md:px-5 lg:px-0">
         <Title name="Contact Me" />
         <div className="flex h-full flex-col items-center justify-center">
           <div className="space-x-4">

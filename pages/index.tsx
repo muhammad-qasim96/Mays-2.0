@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useState } from "react";
 import About from "../components/About";
+import Blog from "../components/Blog";
 import Contact from "../components/Contact";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -24,12 +24,16 @@ const Home: NextPage = () => {
 
       <main className="bg-darkBg">
         <Header />
-        <section id="home" className="">
+        <section id="home">
           <Hero />
         </section>
 
-        <section id="about" className="">
+        <section id="about">
           <About />
+        </section>
+
+        <section id="blog">
+          <Blog />
         </section>
 
         <section id="contact">

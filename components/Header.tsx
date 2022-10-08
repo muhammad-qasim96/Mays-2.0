@@ -22,7 +22,7 @@ const Header = (props: Props) => {
 
   return (
     <header className="absolute z-10  w-screen max-w-full">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 md:px-5 lg:px-0">
         <Image src={Logo} alt="" width={150} height={150} />
         <nav className="hidden lg:inline-flex">
           <ul className="flex flex-nowrap items-center justify-evenly space-x-12">
@@ -30,7 +30,7 @@ const Header = (props: Props) => {
               <a href="#about">About</a>
             </li>
             <li className="cursor-pointer text-lg font-semibold text-white duration-200 hover:scale-110 hover:text-mainColor">
-              <Link href="/blog">Blog</Link>
+              <a href="#blog">Blog</a>
             </li>
             <li className="cursor-pointer text-lg font-semibold text-white duration-200 hover:scale-110 hover:text-mainColor">
               <a href="#courses">Courses</a>
@@ -50,63 +50,63 @@ const Header = (props: Props) => {
             </li>
           </ul>
         </nav>
-      </div>
 
-      {/****** Mobile menu ******/}
+        {/****** Mobile menu ******/}
 
-      <div className="lg:hidden">
-        <button
-          onClick={handleNav}
-          className="relative text-3xl text-white md:text-5xl lg:hidden"
-        >
-          {nav ? <HiX /> : <HiOutlineMenuAlt4 />}
-        </button>
-
-        <div
-          className={
-            nav
-              ? "fixed left-0 top-0 z-20 flex h-screen flex-col space-y-5 bg-black/80 px-10 pt-24 backdrop-blur duration-300 ease-out"
-              : "fixed -left-full top-0 z-20 flex h-screen flex-col space-y-5 bg-black/80 px-10 pt-24 backdrop-blur duration-300 ease-in"
-          }
-        >
-          <ul className="mt-3 flex flex-col space-y-5">
-            <li
-              onClick={handleNav}
-              className="cursor-pointer text-base font-semibold text-white hover:text-mainColor md:text-xl"
-            >
-              <a href="#about">About</a>
-            </li>
-            <li
-              onClick={handleNav}
-              className="cursor-pointer text-base font-semibold text-white hover:text-mainColor md:text-xl"
-            >
-              <Link href="/blog">Blog</Link>
-            </li>
-            <li
-              onClick={handleNav}
-              className="cursor-pointer text-base font-semibold text-white hover:text-mainColor md:text-xl"
-            >
-              <a href="#courses">Courses</a>
-            </li>
-            <li
-              onClick={handleNav}
-              className="cursor-pointer text-base font-semibold text-white hover:text-mainColor md:text-xl"
-            >
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-          <a
-            href="https://form.jotform.com/221863726638465"
-            target="_blank"
-            rel="noreferrer"
-            className="whitespace-nowrap rounded-xl bg-mainColor px-5 py-3 text-center font-pop text-white duration-200 ease-out hover:scale-110"
+        <div className="lg:hidden">
+          <button
+            onClick={handleNav}
+            className="relative text-3xl text-white md:text-5xl lg:hidden"
           >
-            Join Now
-          </a>
-          <div className="flex items-center space-x-5">
-            <SocialIcon url="https://www.facebook.com/dr.maysaljbory" />
-            <SocialIcon url="https://www.instagram.com/dr.maysaljbory/" />
-            <SocialIcon url="https://www.youtube.com/channel/UCV3UKMcmpSwPopq387iNbGw" />
+            {nav ? <HiX /> : <HiOutlineMenuAlt4 />}
+          </button>
+
+          <div
+            className={
+              nav
+                ? "fixed left-0 top-0 z-20 flex h-screen flex-col space-y-5 bg-black/80 px-10 pt-24 backdrop-blur duration-300 ease-out"
+                : "fixed -left-full top-0 z-20 flex h-screen flex-col space-y-5 bg-black/80 px-10 pt-24 backdrop-blur duration-300 ease-in"
+            }
+          >
+            <ul className="mt-3 flex flex-col space-y-5">
+              <li
+                onClick={handleNav}
+                className="cursor-pointer text-base font-semibold text-white hover:text-mainColor md:text-xl"
+              >
+                <a href="#about">About</a>
+              </li>
+              <li
+                onClick={handleNav}
+                className="cursor-pointer text-base font-semibold text-white hover:text-mainColor md:text-xl"
+              >
+                <a href="#blog">Blog</a>
+              </li>
+              <li
+                onClick={handleNav}
+                className="cursor-pointer text-base font-semibold text-white hover:text-mainColor md:text-xl"
+              >
+                <a href="#courses">Courses</a>
+              </li>
+              <li
+                onClick={handleNav}
+                className="cursor-pointer text-base font-semibold text-white hover:text-mainColor md:text-xl"
+              >
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+            <a
+              href="https://form.jotform.com/221863726638465"
+              target="_blank"
+              rel="noreferrer"
+              className="whitespace-nowrap rounded-xl bg-mainColor px-5 py-3 text-center font-pop text-white duration-200 ease-out hover:scale-110"
+            >
+              Join Now
+            </a>
+            <div className="flex items-center space-x-5">
+              <SocialIcon url="https://www.facebook.com/dr.maysaljbory" />
+              <SocialIcon url="https://www.instagram.com/dr.maysaljbory/" />
+              <SocialIcon url="https://www.youtube.com/channel/UCV3UKMcmpSwPopq387iNbGw" />
+            </div>
           </div>
         </div>
       </div>

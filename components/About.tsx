@@ -7,13 +7,13 @@ type Props = {};
 
 const About = (props: Props) => {
   return (
-    <div className="relative mx-auto h-fit min-h-screen w-full overflow-hidden border-b-2 border-mainColor/20 bg-darkBg px-5 pt-7 sm:h-auto md:h-full md:px-10 lg:px-14">
-      <div className="absolute flex h-full w-full items-center justify-center">
+    <div className="relative mx-auto h-fit min-h-screen w-full overflow-hidden border-b-2 border-mainColor/20">
+      <div className="absolute z-0 flex h-full w-full items-center justify-center">
         <div className="absolute z-0 aspect-square h-2/3 animate-pulse rounded-full border border-mainColor/10" />
         <div className="absolute z-0 aspect-square h-2/3 animate-ping rounded-full border border-mainColor/25" />
       </div>
 
-      <div className="m-auto max-w-6xl">
+      <div className="z-10 m-auto max-w-6xl px-4 pt-7 md:px-5 lg:px-0">
         <Title name="About" />
         <div className="z-10 flex flex-col items-center justify-between space-y-10 lg:flex-row">
           <div className="space-y-5">
@@ -43,18 +43,21 @@ const About = (props: Props) => {
               scientific foundations and steps.
             </p>
             <div className="flex space-x-5">
-              <button className="whitespace-nowrap rounded-full bg-mainColor px-5 py-3 text-lg text-white duration-200 ease-out hover:scale-110">
-                <a
-                  href="https://form.jotform.com/221863726638465"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Join Now
-                </a>
-              </button>
-              <button className="w-28 whitespace-nowrap rounded-full border border-mainColor px-5 py-3 text-lg text-mainColor duration-200 ease-out hover:scale-110">
-                <Link href="/blog">Blog</Link>
-              </button>
+              <a
+                href="https://form.jotform.com/221863726638465"
+                target="_blank"
+                rel="noreferrer"
+                className="z-10 whitespace-nowrap rounded-full bg-mainColor px-5 py-3 text-lg text-white duration-200 ease-out hover:scale-110"
+              >
+                Join Now
+              </a>
+
+              <a
+                href="#blog"
+                className="z-20 w-28 whitespace-nowrap rounded-full border border-mainColor px-5 py-3 text-center text-lg text-mainColor duration-200 ease-out hover:scale-110"
+              >
+                Blog
+              </a>
             </div>
           </div>
           <div className="relative aspect-[13/16] h-56 flex-shrink-0 overflow-hidden rounded-lg shadow-xl shadow-gray-700 md:h-96">
