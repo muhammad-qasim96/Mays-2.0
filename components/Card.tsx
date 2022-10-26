@@ -1,24 +1,28 @@
+import Link from "next/link";
 import React from "react";
 
-type Props = {};
+type Props = {
+  id: string;
+  photoUrl: string;
+  header: string;
+  body: string;
+};
 
-const Card = (props: Props) => {
+const Card = ({ id, photoUrl, body, header }: Props) => {
   return (
-    <div className="card w-80 bg-base-300 shadow-xl shadow-gray-800">
-      <figure>
-        <picture>
-          <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
+    <div className="card w-80 bg-base-300 shadow-gray-800">
+      <figure className="aspect-[20/12] w-full overflow-hidden">
+        <picture className="w-full">
+          <img className="w-full object-cover" src={photoUrl} alt="" />
         </picture>
       </figure>
       <div className="card-body">
-        <h2 className="card-title">Shoes!</h2>
-        <p className="line-clamp-3">
-          If a dog chews shoes whose shoes does he choose? If a dog chews shoes
-          whose shoes does he choose? If a dog chews shoes whose shoes does he
-          choose?
-        </p>
+        <h2 className="card-title">{header}</h2>
+        <p className="text-gray-500 line-clamp-3">{body}</p>
         <div className="card-actions justify-end">
-          <button className="btn">Read More</button>
+          <Link href={id}>
+            <button className="btn">Read More</button>
+          </Link>
         </div>
       </div>
     </div>

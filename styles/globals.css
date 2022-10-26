@@ -17,4 +17,11 @@
   .webContainer {
     @apply mx-auto h-full w-full px-5 md:px-10 lg:px-14;
   }
+
+  .grid-cols-12fr {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+  }
 }

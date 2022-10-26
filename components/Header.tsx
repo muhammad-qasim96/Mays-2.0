@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Logo from "../public/logo.webp";
 import { HiOutlineMenuAlt4, HiX } from "react-icons/hi";
@@ -21,7 +20,7 @@ const Header = (props: Props) => {
   }, [nav]);
 
   return (
-    <header className="absolute z-10  w-screen max-w-full">
+    <header className="absolute z-50  w-screen max-w-full">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 md:px-5 lg:px-0">
         <Image src={Logo} alt="" width={150} height={150} />
         <nav className="hidden lg:inline-flex">

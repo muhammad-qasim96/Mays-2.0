@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import Title from "./Title";
 
@@ -13,7 +12,7 @@ const About = (props: Props) => {
         <div className="absolute z-0 aspect-square h-2/3 animate-ping rounded-full border border-mainColor/25" />
       </div>
 
-      <div className="z-10 m-auto max-w-6xl px-4 pt-7 md:px-5 lg:px-0">
+      <div className="z-10 m-auto max-w-6xl px-4 py-7 md:px-5 lg:px-0">
         <Title name="About" />
         <div className="z-10 flex flex-col items-center justify-between space-y-10 lg:flex-row">
           <div className="space-y-5">
