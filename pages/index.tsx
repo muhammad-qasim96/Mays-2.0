@@ -3,6 +3,7 @@ import Head from "next/head";
 import About from "../components/About";
 import Blog from "../components/Blog";
 import Contact from "../components/Contact";
+import Courses from "../components/Courses";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 
@@ -22,7 +23,7 @@ const Home: NextPage = () => {
         />
       </Head>
 
-      <main className="bg-darkBg">
+      <div className="bg-darkBg">
         <Header />
         <section id="home">
           <Hero />
@@ -36,10 +37,14 @@ const Home: NextPage = () => {
           <Blog />
         </section>
 
+        <section id="courses">
+          <Courses />
+        </section>
+
         <section id="contact">
           <Contact />
         </section>
-      </main>
+      </div>
     </>
   );
 };

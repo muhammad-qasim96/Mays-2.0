@@ -11,7 +11,7 @@ type Props = {
 
 const BlogId = ({ blogPost }: Props) => {
   return (
-    <div className="mx-auto max-w-6xl pt-16">
+    <div className="mx-auto max-w-6xl py-16">
       <Link href="/">
         <div className="mb-5 flex cursor-pointer items-center gap-2">
           <BiArrowBack />
