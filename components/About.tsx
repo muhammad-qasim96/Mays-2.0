@@ -56,13 +56,6 @@ const About = (props: Props) => {
               >
                 Join Now
               </a>
-
-              <a
-                href="#blog"
-                className="z-20 w-28 whitespace-nowrap rounded-full border border-mainColor px-5 py-3 text-center text-lg text-mainColor duration-200 ease-out hover:scale-110 lg:text-xl xl:text-2xl"
-              >
-                Blog
-              </a>
             </div>
           </div>
           <div className="relative aspect-[13/16] h-56 flex-shrink-0 overflow-hidden rounded-lg shadow-xl shadow-gray-700 md:h-96">
