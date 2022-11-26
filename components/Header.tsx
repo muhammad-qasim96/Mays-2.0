@@ -32,9 +32,6 @@ const Header = (props: Props) => {
               <a href="#blog">Blog</a>
             </li>
             <li className="cursor-pointer text-lg font-semibold text-white duration-200 hover:scale-110 hover:text-mainColor">
-              <a href="#courses">Courses</a>
-            </li>
-            <li className="cursor-pointer text-lg font-semibold text-white duration-200 hover:scale-110 hover:text-mainColor">
               <a href="#contact">Contact</a>
             </li>
             <li>
@@ -80,12 +77,7 @@ const Header = (props: Props) => {
               >
                 <a href="#blog">Blog</a>
               </li>
-              <li
-                onClick={handleNav}
-                className="cursor-pointer text-base font-semibold text-white hover:text-mainColor md:text-xl"
-              >
-                <a href="#courses">Courses</a>
-              </li>
+
               <li
                 onClick={handleNav}
                 className="cursor-pointer text-base font-semibold text-white hover:text-mainColor md:text-xl"

@@ -1,9 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from "next";
-import Posts from "../../data/blogPosts.json";
 import Image from "next/image";
-import { blogPost } from "../../types";
-import { BiArrowBack } from "react-icons/bi";
 import Link from "next/link";
+import { BiArrowBack } from "react-icons/bi";
+
+import Posts from "../../data/blogPosts.json";
+import { blogPost } from "../../types";
 
 type Props = {
   blogPost: blogPost;
@@ -13,7 +14,7 @@ const BlogId = ({ blogPost }: Props) => {
   return (
     <div className="mx-auto max-w-6xl py-16">
       <Link href="/">
-        <div className="mb-5 flex cursor-pointer items-center gap-2">
+        <div className="mb-5 flex cursor-pointer items-center gap-2 hover:brightness-110">
           <BiArrowBack />
           <p>Back</p>
         </div>
