@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         />
       </Head>
 
-      <main className="bg-darkBg">
+      <div className="bg-darkBg">
         <Header />
         <section id="home">
           <Hero />
@@ -39,7 +39,7 @@ const Home: NextPage = () => {
         <section id="contact">
           <Contact />
         </section>
-      </main>
+      </div>
     </>
   );
 };

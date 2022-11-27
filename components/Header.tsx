@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Logo from "../public/logo.webp";
 import { HiOutlineMenuAlt4, HiX } from "react-icons/hi";
@@ -21,7 +20,7 @@ const Header = (props: Props) => {
   }, [nav]);
 
   return (
-    <header className="absolute z-10  w-screen max-w-full">
+    <header className="absolute z-50  w-screen max-w-full">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 md:px-5 lg:px-0">
         <Image src={Logo} alt="" width={150} height={150} />
         <nav className="hidden lg:inline-flex">
@@ -31,9 +30,6 @@ const Header = (props: Props) => {
             </li>
             <li className="cursor-pointer text-lg font-semibold text-white duration-200 hover:scale-110 hover:text-mainColor">
               <a href="#blog">Blog</a>
-            </li>
-            <li className="cursor-pointer text-lg font-semibold text-white duration-200 hover:scale-110 hover:text-mainColor">
-              <a href="#courses">Courses</a>
             </li>
             <li className="cursor-pointer text-lg font-semibold text-white duration-200 hover:scale-110 hover:text-mainColor">
               <a href="#contact">Contact</a>
@@ -81,12 +77,7 @@ const Header = (props: Props) => {
               >
                 <a href="#blog">Blog</a>
               </li>
-              <li
-                onClick={handleNav}
-                className="cursor-pointer text-base font-semibold text-white hover:text-mainColor md:text-xl"
-              >
-                <a href="#courses">Courses</a>
-              </li>
+
               <li
                 onClick={handleNav}
                 className="cursor-pointer text-base font-semibold text-white hover:text-mainColor md:text-xl"
