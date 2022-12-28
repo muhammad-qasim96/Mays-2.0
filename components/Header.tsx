@@ -7,17 +7,17 @@ import { SocialIcon } from "react-social-icons";
 type Props = {};
 
 const Header = (props: Props) => {
-  const [nav, setNav] = useState<boolean>(false);
+  const [openNav, setOpenNav] = useState<boolean>(false);
 
   const handleNav = () => {
-    setNav((prev) => !prev);
+    setOpenNav((prev) => !prev);
   };
 
   useEffect(() => {
-    nav
+    openNav
       ? (document.body.style.overflow = "hidden")
       : (document.body.style.overflow = "auto");
-  }, [nav]);
+  }, [openNav]);
 
   return (
     <header className="absolute z-50  w-screen max-w-full">
@@ -54,12 +54,12 @@ const Header = (props: Props) => {
             onClick={handleNav}
             className="relative text-3xl text-white md:text-5xl lg:hidden"
           >
-            {nav ? <HiX /> : <HiOutlineMenuAlt4 />}
+            {openNav ? <HiX /> : <HiOutlineMenuAlt4 />}
           </button>
 
           <div
             className={
-              nav
+              openNav
                 ? "fixed left-0 top-0 z-20 flex h-screen flex-col space-y-5 bg-black/80 px-10 pt-24 backdrop-blur duration-300 ease-out"
                 : "fixed -left-full top-0 z-20 flex h-screen flex-col space-y-5 bg-black/80 px-10 pt-24 backdrop-blur duration-300 ease-in"
             }

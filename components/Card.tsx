@@ -20,7 +20,7 @@ const Card = ({ id, photoUrl, body, header }: Props) => {
         <h2 className="card-title">{header}</h2>
         <p className="text-gray-500 line-clamp-3">{body}</p>
         <div className="card-actions justify-end">
-          <Link href={id}>
+          <Link href={`/${id}`}>
             <button className="btn">Read More</button>
           </Link>
         </div>

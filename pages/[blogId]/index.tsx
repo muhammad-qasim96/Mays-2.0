@@ -1,8 +1,8 @@
-import { GetStaticPaths, GetStaticProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { BiArrowBack } from "react-icons/bi";
 
+import { GetStaticPaths, GetStaticProps } from "next";
 import Posts from "../../data/blogPosts.json";
 import { blogPost } from "../../types";
 
@@ -12,7 +12,7 @@ type Props = {
 
 const BlogId = ({ blogPost }: Props) => {
   return (
-    <div className="mx-auto max-w-6xl py-16">
+    <div className="mx-auto max-w-6xl px-2 py-16">
       <Link href="/">
         <div className="mb-5 flex cursor-pointer items-center gap-2 hover:brightness-110">
           <BiArrowBack />
@@ -20,16 +20,16 @@ const BlogId = ({ blogPost }: Props) => {
         </div>
       </Link>
 
-      <div className="grid-cols-12fr h-full">
+      <div className="md:grid-cols-12fr grid h-full">
         <div className="relative h-72 w-full overflow-hidden rounded-md">
           <Image src={blogPost?.photo} alt="" layout="fill" objectFit="cover" />
         </div>
 
-        <div className="">
-          <h2 className="mb-5 text-2xl font-bold text-slate-200">
+        <div>
+          <h2 className="mb-5 text-xl font-bold text-slate-200 md:text-2xl">
             {blogPost?.header}
           </h2>
-          <p className="w-3/4 text-lg">{blogPost?.body}</p>
+          <p className="text-lg md:w-3/4">{blogPost?.body}</p>
         </div>
       </div>
     </div>

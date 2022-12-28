@@ -1,36 +1,49 @@
-import React from "react";
-import { SocialIcon } from "react-social-icons";
-import Title from "./Title";
+import React, { FormEvent } from "react";
+import { ImFacebook2 } from "react-icons/im";
+import { BsInstagram } from "react-icons/bs";
+import { FaTiktok, FaYoutube } from "react-icons/fa";
 
 type Props = {};
 
 const Contact = (props: Props) => {
+  const handleForm = (e: FormEvent) => {
+    e.preventDefault();
+  };
+
   return (
-    <div className="mx-auto h-screen w-full overflow-hidden bg-darkBg pt-7">
-      <div className="mx-auto h-full max-w-6xl px-4 md:px-5 lg:px-0">
-        <Title name="Contact Me" />
-        <div className="flex h-full  w-full flex-col items-center justify-center ">
-          <div className="flex w-full flex-row justify-center">
-            <div className="grid h-auto place-items-center">
-              <div className="flex flex-col space-y-3">
-                <SocialIcon url="https://www.facebook.com/dr.maysaljbory" />
-                <SocialIcon url="https://www.instagram.com/dr.maysaljbory/" />
-                <SocialIcon url="https://www.youtube.com/channel/UCV3UKMcmpSwPopq387iNbGw" />
-                <SocialIcon
-                  url="https://www.tiktok.com/@dr.maysaljbory?_t=8VIALvMEkc9&_r=1"
-                  bgColor="#303030"
-                />
-              </div>
-            </div>
-            <div className="divider lg:divider-horizontal">OR</div>
-            <div className="card rounded-box grid h-20 place-items-center bg-base-300">
-              <p className="p-4 text-xl">
-                <span className="font-semibold text-mainColor">Email : </span>
-                drmays.info@gmail.com
-              </p>
-            </div>
-          </div>
-        </div>
+    <div
+      id="contact"
+      className="flex w-full items-center justify-center gap-3 bg-mainColor py-3"
+    >
+      <p className="text-lg font-semibold uppercase text-darkBg">
+        contact me at:
+      </p>
+      <form
+        onSubmit={handleForm}
+        className="relative flex overflow-hidden rounded-md bg-slate-100 py-2"
+      >
+        <input
+          type="text"
+          placeholder="Enter your e-mail"
+          className="flex-1 bg-transparent px-2 text-black outline-none placeholder:text-sm"
+        />
+        <button className="absolute right-0 top-0 h-full bg-darkBg px-2 text-white/90 hover:text-white">
+          JOIN
+        </button>
+      </form>
+      <div className="flex items-center gap-3">
+        <a href="https://www.facebook.com/dr.maysaljbory">
+          <ImFacebook2 className="text-2xl text-white" />
+        </a>
+        <a href="https://www.instagram.com/dr.maysaljbory/">
+          <BsInstagram className="text-2xl text-white" />
+        </a>
+        <a href="https://www.youtube.com/channel/UCV3UKMcmpSwPopq387iNbGw">
+          <FaYoutube className="text-3xl text-white" />
+        </a>
+        <a href="https://www.tiktok.com/">
+          <FaTiktok className="text-2xl text-white" />
+        </a>
       </div>
     </div>
   );

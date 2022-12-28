@@ -5,7 +5,10 @@ type Props = {};
 
 const Hero = (props: Props) => {
   return (
-    <main className="h-screen overflow-hidden bg-hero bg-cover bg-right ">
+    <main
+      id="home"
+      className="h-screen overflow-hidden bg-hero bg-cover bg-right "
+    >
       <div className="h-full w-full bg-black/30">
         <div className="mx-auto h-full w-full max-w-6xl ">
           <div className="mx-auto flex h-full w-full flex-col justify-center px-4 backdrop-blur-sm md:px-5 lg:px-0 lg:backdrop-blur-none">
@@ -18,7 +21,7 @@ const Hero = (props: Props) => {
               foundations and steps.
             </p>
           </div>
-          <div className="absolute bottom-10 right-0 z-20 hidden flex-col space-y-4 rounded-l-xl  bg-black/25 p-5 backdrop-blur-md hover:right-0 lg:flex">
+          <div className="absolute bottom-10 right-0 z-20 hidden flex-col space-y-4 rounded-l-xl bg-black/25 p-5 backdrop-blur-md lg:flex">
             <SocialIcon url="https://www.facebook.com/dr.maysaljbory" />
             <SocialIcon url="https://www.instagram.com/dr.maysaljbory/" />
             <SocialIcon url="https://www.youtube.com/channel/UCV3UKMcmpSwPopq387iNbGw" />

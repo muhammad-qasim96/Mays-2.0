@@ -6,7 +6,10 @@ type Props = {};
 
 const About = (props: Props) => {
   return (
-    <div className="relative mx-auto h-fit min-h-screen w-full overflow-hidden border-b-2 border-mainColor/20">
+    <div
+      id="about"
+      className="relative mx-auto h-fit min-h-screen w-full overflow-hidden border-b-2 border-mainColor/20"
+    >
       <div className="absolute z-0 flex h-full w-full items-center justify-center">
         <div className="absolute z-0 aspect-square h-2/3 animate-pulse rounded-full border border-mainColor/10" />
         <div className="absolute z-0 aspect-square h-2/3 animate-ping rounded-full border border-mainColor/25" />
